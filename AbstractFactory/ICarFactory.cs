@@ -8,8 +8,8 @@ namespace AbstractFactory
 {
     interface ICarFactory
     {
-        Vehicle CreateVehicle();
-        Cargo CreateCargo();
-        Tank CreateTank();
+        Vehicle CreateVehicle(string brand);
+        Cargo CreateCargo(string brand);
+        Tank CreateTank(string brand);
     }
 }

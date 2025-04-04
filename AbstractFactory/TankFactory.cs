@@ -8,13 +8,18 @@ namespace AbstractFactory
 {
     class TankFactory : ICarFactory
     {
-        public Vehicle CreateVehicle() => null;
+        public Vehicle CreateVehicle(string brand) => null;
+        public Cargo CreateCargo(string brand) => null;
 
-        public Cargo CreateCargo() => null;
-
-        public Tank CreateTank()
+        public Tank CreateTank(string brand)
         {
-            return new Tank { ProjectileCaliber = 120, ShotsPerMinute = 10, CrewSize = 4 };
+            return brand switch
+            {
+                "Abrams" => new Abrams(),
+                "Merkava" => new Merkava(),
+                "Tiger" => new Tiger(),
+                _ => throw new ArgumentException($"Неизвестный бренд: {brand}", nameof(brand))
+            };
         }
     }
 }

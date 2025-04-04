@@ -8,19 +8,19 @@ namespace AbstractFactory
 {
     class VehicleFactory : ICarFactory
     {
-        public Vehicle CreateVehicle()
+        public Vehicle CreateVehicle(string brand)
         {
-            return new Vehicle { Class = "Sedan", Color = "Red", WheelDrive = "Front" };
+            return brand switch
+            {
+                "Audi" => new Audi(),
+                "Honda" => new Honda(),
+                "Tesla" => new Tesla(),
+                _ => throw new ArgumentException($"Неизвестный бренд: {brand}", nameof(brand))
+            };
         }
 
-        public Cargo CreateCargo()
-        {
-            return null;
-        }
-
-        public Tank CreateTank()
-        {
-            return null;
-        }
+        public Cargo CreateCargo(string brand) => null;
+        public Tank CreateTank(string brand) => null;
     }
+
 }
