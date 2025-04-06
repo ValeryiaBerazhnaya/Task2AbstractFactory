@@ -2,14 +2,16 @@
 
 namespace AbstractFactory
 {
-    class Honda : Vehicle
+    public class Honda : Vehicle
     {
-        public Honda() : base("Sedan", "All", "Red", 2000, 4, 170) { }
-
-        public override void ShowInfo()
+        public Honda()
         {
-            Console.WriteLine("Honda - Vehicle");
-            base.ShowInfo();
+            Weight = 1400;
+            Length = 4.5;
+            MaxSpeed = 220;
+            WheelDrive = "back";
+            Class = "hatchback";
+            Color = "white";
         }
     }
 }

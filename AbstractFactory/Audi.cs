@@ -2,14 +2,16 @@
 
 namespace AbstractFactory
 {
-    class Audi : Vehicle
+    public class Audi : Vehicle
     {
-        public Audi() : base("Sedan", "All", "Red", 2000, 4, 170) { }
-
-        public override void ShowInfo()
+        public Audi()
         {
-            Console.WriteLine("Audi - Vehicle");
-            base.ShowInfo();
+            Weight = 1500;
+            Length = 4.7;
+            MaxSpeed = 250;
+            WheelDrive = "front";
+            Class = "sedan";
+            Color = "black";
         }
     }
 }

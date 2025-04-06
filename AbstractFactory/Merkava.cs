@@ -2,14 +2,16 @@
 
 namespace AbstractFactory
 {
-    class Merkava : Tank
+    public class Merkava : Tank
     {
-        public Merkava() : base(20, 500, 4, 2000, 4, 170) { }
-
-        public override void ShowInfo()
+        public Merkava()
         {
-            Console.WriteLine("Merkava - Tank");
-            base.ShowInfo();
+            Weight = 8000;
+            Length = 8.0;
+            MaxSpeed = 120;
+            ProjectileCaliber = 20;
+            ShotsPerMinute = 400;
+            CrewSize = 3;
         }
     }
 }

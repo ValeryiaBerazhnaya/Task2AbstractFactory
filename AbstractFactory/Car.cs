@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
-    abstract class Car
+    public abstract class Car
     {
         public double Weight { get; set; }
         public double Length { get; set; }
         public double MaxSpeed { get; set; }
-
-        public abstract void ShowInfo();
     }
 }

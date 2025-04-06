@@ -2,14 +2,16 @@
 
 namespace AbstractFactory
 {
-    class Abrams : Tank
+    public class Abrams : Tank
     {
-        public Abrams() : base(20, 500, 4, 2000, 4, 170) { }
-
-        public override void ShowInfo()
+        public Abrams()
         {
-            Console.WriteLine("Abrams - Tank");
-            base.ShowInfo();
+            Weight = 8000;
+            Length = 8.0;
+            MaxSpeed = 120;
+            ProjectileCaliber = 20;
+            ShotsPerMinute = 400;
+            CrewSize = 3;
         }
     }
 }

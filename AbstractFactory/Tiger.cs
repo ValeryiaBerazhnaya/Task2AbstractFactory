@@ -2,14 +2,16 @@
 
 namespace AbstractFactory
 {
-    class Tiger : Tank
+    public class Tiger : Tank
     {
-        public Tiger() : base(20, 500, 4, 2000, 4, 170) { }
-
-        public override void ShowInfo()
+        public Tiger()
         {
-            Console.WriteLine("Tiger - Tank");
-            base.ShowInfo();
+            Weight = 8000;
+            Length = 8.0;
+            MaxSpeed = 120;
+            ProjectileCaliber = 20;
+            ShotsPerMinute = 400;
+            CrewSize = 3;
         }
     }
 }
